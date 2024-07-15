@@ -60,7 +60,7 @@ const MusicSelection: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col  min-h-screen bg-black text-white p-6">
+    <div className="flex flex-col min-h-screen bg-black text-white p-6">
       <h1 className="text-2xl font-extrabold mb-2 text-left">
         Pick 5 artists you like
       </h1>
@@ -89,16 +89,18 @@ const MusicSelection: React.FC = () => {
           </p>
         )}
       </div>
-      <button
-        className={`px-8 py-2 rounded-full font-bold ${
-          selectedArtists.length > 0
-            ? "bg-white text-black"
-            : "bg-gray-500 text-gray-300 cursor-not-allowed"
-        }`}
-        disabled={selectedArtists.length === 0}
-      >
-        Done
-      </button>
+      <div className="fixed bottom-0 left-0 w-full px-6 pb-6">
+        <button
+          className={`w-full px-8 py-2 rounded-full font-bold ${
+            selectedArtists.length > 0
+              ? "bg-white text-black"
+              : "bg-gray-500 text-gray-300 cursor-not-allowed"
+          }`}
+          disabled={selectedArtists.length === 0}
+        >
+          Done
+        </button>
+      </div>
     </div>
   );
 };
