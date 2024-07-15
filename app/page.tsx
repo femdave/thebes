@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
-import { FaCheckCircle } from "react-icons/fa";
-import Image from "next/image";
 import wizkid from "./../public/wizkid.jpeg";
 import black from "./../public/6lack.jpeg";
 import asake from "./../public/asake.jpeg";
@@ -16,6 +14,7 @@ import jon from "./../public/jon.jpeg";
 import bazzi from "./../public/bazzi.jpeg";
 import SearchBar from "@/components/Searchbar";
 import ArtistCard from "@/components/ArtistCard";
+import FloatingButton from "@/components/FloatingButton";
 
 interface Artist {
   name: string;
@@ -89,18 +88,15 @@ const MusicSelection: React.FC = () => {
           </p>
         )}
       </div>
-      <div className="fixed bottom-0 left-0 w-full px-6 pb-6">
-        <button
-          className={`w-full px-8 py-2 rounded-full font-bold ${
-            selectedArtists.length > 0
-              ? "bg-white text-black"
-              : "bg-gray-500 text-gray-300 cursor-not-allowed"
-          }`}
-          disabled={selectedArtists.length === 0}
-        >
-          Done
-        </button>
-      </div>
+      <FloatingButton
+        isSelected={selectedArtists.length > 0}
+        selectedBgColor="bg-white"
+        unselectedBgColor="bg-gray-500"
+        textColor="text-black"
+        disabled={selectedArtists.length === 0}
+      >
+        Done
+      </FloatingButton>
     </div>
   );
 };
