@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
-import wizkid from "./../public/wizkid.jpeg";
-import black from "./../public/6lack.jpeg";
-import asake from "./../public/asake.jpeg";
-import ayomaff from "./../public/ayomaff.jpeg";
-import burna from "./../public/burna.jpeg";
-import davido from "./../public/davido.jpeg";
-import jcole from "./../public/jscole.jpg";
-import kendrick from "./../public/kendrick.jpeg";
-import rema from "./../public/rema.jpeg";
-import simi from "./../public/simi.jpeg";
-import jon from "./../public/jon.jpeg";
-import bazzi from "./../public/bazzi.jpeg";
+import wizkid from "../../../public/wizkid.jpeg";
+import black from "../../../public/6lack.jpeg";
+import asake from "../../../public/asake.jpeg";
+import ayomaff from "../../../public/ayomaff.jpeg";
+import burna from "../../../public/burna.jpeg";
+import davido from "../../../public/davido.jpeg";
+import jcole from "../../../public/jscole.jpg";
+import kendrick from "../../../public/kendrick.jpeg";
+import rema from "../../../public/rema.jpeg";
+import simi from "../../../public/simi.jpeg";
+import jon from "../../../public/jon.jpeg";
+import bazzi from "../../../public/bazzi.jpeg";
 import SearchBar from "@/components/Searchbar";
 import ArtistCard from "@/components/ArtistCard";
 import FloatingButton from "@/components/FloatingButton";
@@ -70,6 +70,7 @@ const MusicSelection: React.FC = () => {
       <SearchBar
         searchQuery={searchQuery}
         handleSearchChange={handleSearchChange}
+        placeholder="Search artist"
       />
 
       <div className="grid grid-cols-3 gap-4 mb-6">
